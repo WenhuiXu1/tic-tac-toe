@@ -1,6 +1,6 @@
 # Tic Tac Toe
 A simple implementation of the Tic Tac Toe game in HTML, CSS and JavaScript. It features a 3x3 grid where players take turns marking the cells with their respective symbols until one player wins by forming a horizontal, vertical or diagonal line of three symbols or the game ends in a tie.
-## :computer: [Click here](wenhuixu1.github.io) to see my live project.
+## :computer: [Click here](https://wenhuixu1.github.io/tic-tac-toe/) to see my live project.
 ## :page_facing_up: About
 ### How to play
 - Open the game.
