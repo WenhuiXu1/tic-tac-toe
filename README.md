@@ -20,11 +20,17 @@ wait for user input --> check if move is valid --> update board array --> check 
 check for winner or tie --> end game
 ## :rocket: Cool tech
 This project uses vanilla HTML, CSS and JavaScript, without the use of any external libraries or frameworks. It showcases the power of these core web technologies and their ability to create interactive user interfaces and simple games.
-## :scream: Nugs to fix :poop:
+
+##Upnext
+- Bugs to fix
+- Lesson learnt
+
+<!--
+## :scream: Bugs to fix :poop:
 - Anything a little broken
 - Anything a LOT broken
 - Buttons to not click to many times (cause its broken :unamused:)
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
 ## :white_check_mark: Future features
-Cool things I would add if I can keep working on this
+Cool things I would add if I can keep working on this -->
