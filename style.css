@@ -1,0 +1,14 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 10%;
+  }
+  
+  .box {
+    border: 1px solid black;
+    min-width: 30px;
+    min-height: 30px;
+  }
+  
