@@ -1,0 +1,27 @@
+Flow diagram:
+
+start --> initialize variables --> add event listeners --> wait for user input 
+
+wait for user input --> check if move is valid --> update board array --> check for winner or tie --> change player --> wait for user input
+
+wait for user input --> check if move is valid --> update board array --> check for winner or tie --> change player --> wait for user input
+
+...
+
+check for winner or tie --> end game
+
+
+Pseudocode:
+
+Create an array to hold the boxes on the game board.
+Query the document for all box elements and add them to the array.
+Create a board array to hold the current state of the game.
+Set the current player to X.
+Set the gameIsRunning flag to true.
+Define the winningPatterns array.
+Define the winnerIsValid function to check for a winning pattern.
+Define the isValidMove function to check if a move is valid.
+Define the changePlayer function to change the current player.
+Define the updateBoard function to update the board array with the current player's move.
+Define the userAction function to handle a user's click on a box element.
+Add an event listener to each box element that calls the userAction function when clicked.
