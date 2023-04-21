@@ -9,15 +9,13 @@ A simple implementation of the Tic Tac Toe game in HTML, CSS and JavaScript. It 
 - If you win, a message will be displayed to congratulate you. If the game ends in a tie, a message will be displayed to inform you.
 - To restart the game, reload the page.
 ## :pencil2: Planning & Problem Solving
-- Talk about approach to the problem.
-- Add screenshots/drawings of doodles/plans during the planning phase.
+I started by creating the basic HTML structure of the game, which consists of a title, a grid of nine boxes and a script file that handles the game logic. I then used CSS to style the boxes and the grid. Finally, I wrote the JavaScript code to handle the game mechanics, such as updating the board state, checking for wins and ties, and alternating turns between players.
 - Flow charts of app logic.
 ![flowchat](https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
 ## :rocket: Cool tech
-- Programming languages
-- Libraries
-- Animations
-- Anything else you'd be proud to show your parent
+- HTML
+- CSS
+- JavaScript
 ## :scream: Nugs to fix :poop:
 - Anything a little broken
 - Anything a LOT broken
