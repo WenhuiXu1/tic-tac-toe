@@ -1,15 +1,13 @@
-# Project Name
-The breifest description of my project and why you should use it.
-## :computer: [Click here](https://www.example.com) to see my live project.
+# Tic Tac Toe
+A simple implementation of the Tic Tac Toe game in HTML, CSS and JavaScript. It features a 3x3 grid where players take turns marking the cells with their respective symbols until one player wins by forming a horizontal, vertical or diagonal line of three symbols or the game ends in a tie.
+## :computer: [Click here](wenhuixu1.github.io) to see my live project.
 ## :page_facing_up: About
-- How to use my awesome project.
-- Download instructions (if relevant):
-```
-$ git clone my-awesome-app
-$ cd my_awesome-app
-$ node app.js
-```
--Add in-app screenshots.
+### How to play
+- Open the game.
+- Click on any empty cell to mark it with your symbol (X or O).
+- Alternate turns with the other player until one wins or the game ends in a tie.
+- If you win, a message will be displayed to congratulate you. If the game ends in a tie, a message will be displayed to inform you.
+- To restart the game, reload the page.
 ## :pencil2: Planning & Problem Solving
 - Talk about approach to the problem.
 - Add screenshots/drawings of doodles/plans during the planning phase.
