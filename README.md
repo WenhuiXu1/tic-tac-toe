@@ -10,7 +10,7 @@ A simple implementation of the Tic Tac Toe game in HTML, CSS and JavaScript. It 
 - To restart the game, reload the page.
 ## :pencil2: Planning & Problem Solving
 I started by creating the basic HTML structure of the game, which consists of a title, a grid of nine boxes and a script file that handles the game logic. I then used CSS to style the boxes and the grid. Finally, I wrote the JavaScript code to handle the game mechanics, such as updating the board state, checking for wins and ties, and alternating turns between players.
-##Flow charts of app logic.
+## :Flow charts of app logic.
 start --> initialize variables --> add event listeners --> wait for user input 
 
 wait for user input --> check if move is valid --> update board array --> check for winner or tie --> change player --> wait for user input
