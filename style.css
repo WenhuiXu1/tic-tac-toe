@@ -1,14 +1,78 @@
-
-.container {
+/* * {
+  border: 1px solid darkgreen;
+  margin: 1px;
+} */
+  .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    max-width: 10%;
+    max-width: 50%;
+    animation: fadeIn 5s;
+    margin: auto;
+
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .box {
-    border: 1px solid black;
-    min-width: 30px;
-    min-height: 30px;
+    border: 3px solid darkgray;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
   }
+  
+  .box:hover {
+    background-color: rgb(218, 228, 237);
+    cursor: pointer;
+  }
+
+  /* .box.X {
+    color: lightcoral;
+  }
+
+  .box.O {
+    color: lightseagreen;
+  } */
+
+.symbol-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20%;
+}
+
+
+  #message {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: slideDown 5s;
+  }
+  
+  @keyframes slideDown {
+    from { margin-top: -100px; opacity: 0; }
+    to { margin-top: 20px; opacity: 1; }
+  }
+  
+  h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 48px;
+    text-align: center;
+    color: darkgray;
+  }
+  
+  body {
+    background-image: url('https://images.unsplash.com/photo-1528459105426-b9548367069b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1264&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   #message {
+    color: darkgray;
+   }
   

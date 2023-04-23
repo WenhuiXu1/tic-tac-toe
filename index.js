@@ -3,6 +3,7 @@ var boxElements = document.querySelectorAll('.box');
 for (var i = 0; i < boxElements.length; i++) {
     boxes.push(boxElements[i]);
 }
+var message = document.getElementById('message');
 
 let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
@@ -34,9 +35,9 @@ function resultIsValid() {
 
     if (thereIsAWinner) {
         if (currentPlayer === 'X') {
-            alert('PLAYER X WON');
+            message.innerHTML = `Mcdonald's Won`;
         } else {
-            alert('PLAYER O WON');
+            message.innerHTML = 'KFC Won';
         }
         gameIsRunning = false;
         return;
@@ -50,7 +51,7 @@ function resultIsValid() {
         }
     }
     if (isTie) {
-        alert('TIE');
+        message.innerHTML = `It's a tie.`
         gameIsRunning = false;
         return;
     }
@@ -75,14 +76,31 @@ var updateBoard = function (index) {
     board[index] = currentPlayer;
 }
 
+// var userAction = (box, index) => {
+//     if(isValidMove(box) && gameIsRunning) {
+//         box.innerText = currentPlayer;
+//         box.classList.add(currentPlayer);
+//         updateBoard(index);
+//         resultIsValid();
+//         changePlayer();
+//     }
+// }
+
 var userAction = (box, index) => {
-    if(isValidMove(box) && gameIsRunning) {
-        box.innerText = currentPlayer;
-        updateBoard(index);
-        resultIsValid();
-        changePlayer();
+    if (isValidMove(box) && gameIsRunning) {
+      var img = document.createElement("img");
+      img.src = (currentPlayer === "X") ? "./images/pic2.png" : "./images/kfc.jpeg";
+      img.alt = currentPlayer;
+      img.classList.add("symbol-image");
+      box.appendChild(img);
+      box.classList.add(currentPlayer);
+      updateBoard(index);
+      resultIsValid();
+      changePlayer();
     }
-}
+  };
+  
+  
 
 // Add event listener for each box element
 for (let i = 0; i < boxes.length; i++) {
@@ -92,5 +110,17 @@ for (let i = 0; i < boxes.length; i++) {
     });
   }
 
-
-
+  var getQuote = function () {
+    fetch('https://api.quotable.io/random')
+      .then(response => response.json())
+      .then(data => {
+        message.innerHTML = `${data.content} - ${data.author}`;
+      })
+      .catch(error => {
+        console.log(error);
+        message.innerHTML = 'Error fetching quote. Please try again later.';
+      });
+  };
+  
+  getQuote();
+  
