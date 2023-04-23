@@ -22,15 +22,12 @@ check for winner or tie --> end game
 ## :rocket: Cool tech
 This project uses vanilla HTML, CSS and JavaScript, without the use of any external libraries or frameworks. It showcases the power of these core web technologies and their ability to create interactive user interfaces and simple games.
 
-##Upnext
-- Bugs to fix
-- Lesson learnt
-
-<!--
 ## :scream: Bugs to fix :poop:
-- Anything a little broken
-- Anything a LOT broken
-- Buttons to not click to many times (cause its broken :unamused:)
+- cannot prevent players adding pictures in the same cell (the oringinal one can but once I add pictures it stopped)
+
+## Upnext
+- Lesson learnt
+<!--
 ## :sob: Lessons learnt
 What I would do differently if I could wind back the clock...
 ## :white_check_mark: Future features

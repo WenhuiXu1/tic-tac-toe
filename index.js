@@ -58,7 +58,7 @@ function resultIsValid() {
 }
 
 var isValidMove = function (box) {
-    if (box.innerHTML !== ''){
+    if (box.innerText === 'X' || box.innerText === 'O'){
         return false;
     }
     return true;
