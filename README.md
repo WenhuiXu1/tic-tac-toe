@@ -23,7 +23,7 @@ check for winner or tie --> end game
 This project uses vanilla HTML, CSS and JavaScript, without the use of any external libraries or frameworks. It showcases the power of these core web technologies and their ability to create interactive user interfaces and simple games.
 
 ## :scream: Bugs to fix :poop:
-- cannot change player after adding picture
+- cannot prevent players adding pictures in the same cell (the oringinal one can but once I add pictures it stopped)
 
 ## Upnext
 - Lesson learnt
