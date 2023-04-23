@@ -9,7 +9,6 @@
     max-width: 50%;
     animation: fadeIn 5s;
     margin: auto;
-
   }
 
   @keyframes fadeIn {
@@ -28,16 +27,18 @@
   }
   
   .box:hover {
-    background-color: rgb(218, 228, 237);
+    background-color: rgb(105, 108, 110);
     cursor: pointer;
   }
-
-  /* .box.X {
+/* 
+  .box.X {
     color: lightcoral;
+    font-size: 45px;
   }
 
   .box.O {
     color: lightseagreen;
+    font-size: 45px;
   } */
 
 .symbol-image {
@@ -49,10 +50,11 @@
 
   #message {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     margin-top: 20px;
     animation: slideDown 5s;
+    font-family: 'Caveat', cursive;
   }
   
   @keyframes slideDown {
@@ -61,18 +63,31 @@
   }
   
   h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Caveat', cursive;
     font-size: 48px;
     text-align: center;
-    color: darkgray;
+    color: darkred;
+  }
+
+  h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: darkred;
   }
   
   body {
-    background-image: url('https://images.unsplash.com/photo-1528459105426-b9548367069b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1264&q=80');
+    background-color: #757c84;
+    /* background-image: url('https://plus.unsplash.com/premium_photo-1674941668322-5705baf56926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80'); */
     background-repeat: no-repeat;
     background-size: cover;
   }
    #message {
-    color: darkgray;
+    color: darkred;
    }
   
+   .image {
+    margin-left: auto;
+    margin-top: 1rem;
+    text-align: center;
+   }

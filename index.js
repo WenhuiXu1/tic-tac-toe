@@ -6,7 +6,7 @@ for (var i = 0; i < boxElements.length; i++) {
 var message = document.getElementById('message');
 
 let board = ['', '', '', '', '', '', '', '', ''];
-let currentPlayer = 'X';
+let currentPlayer = 'MDN';
 let gameIsRunning = true;
 
 var winningPatterns = [
@@ -24,20 +24,20 @@ function resultIsValid() {
     let thereIsAWinner = false;
     for (let i = 0; i < winningPatterns.length; i++) {
         var winningPattern = winningPatterns[i];
-        var a = board[winningPattern[0]];
-        var b = board[winningPattern[1]];
-        var c = board[winningPattern[2]];
-        if (a !== '' && a === b && b === c) {
+        var firstBoxValue = board[winningPattern[0]];
+        var secondBoxValue = board[winningPattern[1]];
+        var thridBoxValue = board[winningPattern[2]];
+        if (firstBoxValue !== '' && firstBoxValue === secondBoxValue && secondBoxValue === thridBoxValue) {
             thereIsAWinner = true;
             break;
         }
     }
 
     if (thereIsAWinner) {
-        if (currentPlayer === 'X') {
-            message.innerHTML = `Mcdonald's Won`;
+        if (currentPlayer === 'MDN') {
+            message.innerHTML = `I'm lovin' it! McDonald's takes the win!`;
         } else {
-            message.innerHTML = 'KFC Won';
+            message.innerHTML = 'Winner, winner, KFC dinner!';
         }
         gameIsRunning = false;
         return;
@@ -51,24 +51,24 @@ function resultIsValid() {
         }
     }
     if (isTie) {
-        message.innerHTML = `It's a tie.`
+        message.innerHTML = `Looks like it's a draw! Try again for a winner.`
         gameIsRunning = false;
         return;
     }
 }
 
 var isValidMove = function (box) {
-    if (box.innerText === 'X' || box.innerText === 'O'){
+    if (box.innerHTML !== ''){
         return false;
     }
     return true;
 };
 
 var changePlayer = function () {
-    if (currentPlayer === 'X') {
-        currentPlayer = 'O';
+    if (currentPlayer === 'MDN') {
+        currentPlayer = 'KFC';
     } else {
-        currentPlayer = 'X';
+        currentPlayer = 'MDN';
     }
 }
 
@@ -88,8 +88,9 @@ var updateBoard = function (index) {
 
 var userAction = (box, index) => {
     if (isValidMove(box) && gameIsRunning) {
+        // box.innerText = " ";
       var img = document.createElement("img");
-      img.src = (currentPlayer === "X") ? "./images/pic2.png" : "./images/kfc.jpeg";
+      img.src = (currentPlayer === "MDN") ? "./images/pic2.png" : "./images/kfc.jpeg";
       img.alt = currentPlayer;
       img.classList.add("symbol-image");
       box.appendChild(img);
@@ -110,17 +111,38 @@ for (let i = 0; i < boxes.length; i++) {
     });
   }
 
-  var getQuote = function () {
-    fetch('https://api.quotable.io/random')
-      .then(response => response.json())
-      .then(data => {
-        message.innerHTML = `${data.content} - ${data.author}`;
-      })
-      .catch(error => {
-        console.log(error);
-        message.innerHTML = 'Error fetching quote. Please try again later.';
-      });
+  var quotes = [
+    "Get ready to battle it out in the ultimate fast food showdown!",
+    "The finger-lickin' good KFC faces off against the world-famous Mcdonald's!",
+    "Can you lead KFC or Mcdonald's to victory in this game of Tic Tac Toe?",
+    "It's time to see which fast food giant comes out on top in this game of strategy and skill!",
+    "Get ready to test your strategy skills in this fast food-themed game of Tic Tac Toe!",
+    "Can you outsmart your opponent and claim victory for your fast food chain of choice?",
+    "The battle between KFC and Mcdonald's is about to commence. Let the games begin!",
+    "Choose your side, make your moves, and claim ultimate fast food glory!",
+    "The fate of fast food rests in your hands. Good luck!",
+    "Think you've got what it takes to dominate the fast food industry? Prove it in this game of Tic Tac Toe!"
+  ];
+  
+  var getRandomQuote = function () {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
   };
   
-  getQuote();
+  message.innerHTML = getRandomQuote();
+  
+
+//   var getQuote = function () {
+//     fetch('https://api.quotable.io/random')
+//       .then(response => response.json())
+//       .then(data => {
+//         message.innerHTML = `${data.content} - ${data.author}`;
+//       })
+//       .catch(error => {
+//         console.log(error);
+//         message.innerHTML = 'Error fetching quote. Please try again later.';
+//       });
+//   };
+  
+//   getQuote();
   
